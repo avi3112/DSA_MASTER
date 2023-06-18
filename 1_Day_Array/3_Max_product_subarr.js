@@ -33,6 +33,9 @@
 // console.log(result)
 
 
+
+// this is optimize solution
+
 function maxprod(nums){
     let maxp=0
     let product=1
