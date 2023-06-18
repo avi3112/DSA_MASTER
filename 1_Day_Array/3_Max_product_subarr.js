@@ -1,5 +1,6 @@
 // 152. Maximum Product Subarray >> need to improve
 
+// we can also solve this using Kadane’s Algorithm
 
 
 // Given an integer array nums, find a 
@@ -43,7 +44,7 @@ function maxprod(nums){
             product=1
         }
     }
-    
+    product=1
     for(let j=nums.length-1;j>=0;j--){
         product=product*nums[j]
         if(product>maxp){
@@ -55,5 +56,26 @@ function maxprod(nums){
     return maxp
 }
 
-const result1= maxprod([-2,0,-1])
+const result1= maxprod([-3,0,1,-2])
 console.log(result1)
+
+
+
+// function maxp(nums){
+//     let maxprod=nums[0]
+//     for(let i=0;i<nums.length;i++){
+//         let prod=1
+        
+//         prod=prod*nums[i]
+//         if(prod>maxprod){
+//             maxprod=prod
+//         }
+//         console.log(prod)
+//         if(prod<0){
+//             prod=1
+//         }
+//     }return maxprod
+// }
+
+// const result= maxp([-3,-1,-1])
+// console.log(result)
