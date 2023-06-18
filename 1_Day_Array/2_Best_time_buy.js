@@ -5,9 +5,6 @@
 // You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
 
 // Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
-
- 
-
 // Example 1:
 
 // Input: prices = [7,1,5,3,6,4]
@@ -15,6 +12,27 @@
 // Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
 // Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
 
+
+
+function best(price){
+    let maxprofit=0
+    for(let i=0;i<price.length;i++){
+        let buy=price[i]
+        for(let j=i+1;j<price.length;j++){
+            let sell= price[j]
+            let curprofit=sell-buy
+            if(curprofit>maxprofit){
+                maxprofit=curprofit
+            }
+        }
+    }return maxprofit
+}
+
+const result1= best([7,1,5,3,6,4])
+console.log(result1)
+
+
+// optimize approch
 
 function besttime(price){
     let profit=0
@@ -28,5 +46,10 @@ function besttime(price){
     }return profit
 }
 
-const result= besttime([7,1,5,3,6,4])
-console.log(result)
+const result2= besttime([7,1,5,3,6,4])
+console.log(result2)
+
+
+
+
+
