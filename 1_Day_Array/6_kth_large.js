@@ -31,7 +31,7 @@
 // const result= kthlarge([3,2,3,1,2,4,5,5,6],4)
 // console.log(result)
 
-const {PriorityQueue,MinPriorityQueue,MaxPriorityQueue,} = require('@datastructures-js/priority-queue');
+// this code will only run on leedcode as we need to implete this priority queue
 
 var findKthLargest = function(nums, k) {
  
