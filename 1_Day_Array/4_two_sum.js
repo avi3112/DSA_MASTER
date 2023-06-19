@@ -35,8 +35,7 @@ function summap(nums,target){
     for(let i=0;i<nums.length;i++){
         let neednum= target-nums[i]
         if (map[neednum] !==undefined){
-            return [map[neednum],i]
-            
+            return [map[neednum],i]    
         }else{
             map[nums[i]]=i
         }

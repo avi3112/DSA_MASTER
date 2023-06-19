@@ -31,9 +31,6 @@
 
 // const result= maxprod([2,3,-2,4])
 // console.log(result)
-
-
-
 // this is optimize solution
 
 function maxprod(nums){

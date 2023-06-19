@@ -17,3 +17,43 @@
 
 // Input: nums = [3,2,3,1,2,4,5,5,6], k = 4
 // Output: 4
+
+
+// function kthlarge(nums,k){
+//     let newarr= nums.sort()
+//     let len= newarr.length
+//     for(let i=0;i<len;i++){
+//         if(i=len-k){
+//             return nums[i]
+//         }
+//     }
+// }
+// const result= kthlarge([3,2,3,1,2,4,5,5,6],4)
+// console.log(result)
+
+const {PriorityQueue,MinPriorityQueue,MaxPriorityQueue,} = require('@datastructures-js/priority-queue');
+
+var findKthLargest = function(nums, k) {
+ 
+ 
+    let maxPriorityQueue = new MaxPriorityQueue();
+   
+    // we need to add all elements to our mpq manually time-0(n)
+    nums.forEach((num) => maxPriorityQueue.enqueue(num))
+   
+   
+    // keep  removing(pop) element from the top
+    while(k>1){
+      maxPriorityQueue.dequeue()
+      k--
+    }
+   
+    // by default maxPriorityQueue.front() returns an objects {priority:5, element:5}
+    // priority will give same result.
+    return maxPriorityQueue.front().element
+  };
+
+
+const result= findKthLargest([3,2,3,1,2,4,5,5,6],4)
+console.log(result)
+
