@@ -14,9 +14,22 @@
 // Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 
 function mergeinterval(intervals){
-    return intervals.sort()
-    
+    intervals= intervals.sort((a,b)=> a[0]-b[0])
+    let result=[]
+    let pair=intervals[0]
+    for(let i of intervals){
+        if(pair[1]>=i[0]){
+            pair[1]=i[1]
+        }
+        else {
+            result.push(pair)
+            pair=i
+        }
+    }
+    result.push(pair)
+    return result
 }
 
-const result= mergeinterval([[1,3],[2,6],[8,10],[15,18]])
+const result= mergeinterval([[1,4],[2,3]])
 console.log(result)
+
