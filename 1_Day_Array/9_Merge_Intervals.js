@@ -1,4 +1,5 @@
 // Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.
+// need to check bro
 
  
 
@@ -15,10 +16,11 @@
 
 function mergeinterval(intervals){
     intervals= intervals.sort((a,b)=> a[0]-b[0])
+    console.log(intervals)
     let result=[]
     let pair=intervals[0]
     for(let i of intervals){
-        if(pair[1]>=i[0]){
+        if(pair[1]>=i[0]&& pair[1]<=i[1]){
             pair[1]=i[1]
         }
         else {
@@ -32,4 +34,5 @@ function mergeinterval(intervals){
 
 const result= mergeinterval([[1,4],[2,3]])
 console.log(result)
+// [[1,3],[2,6],[8,10],[15,18]]
 
