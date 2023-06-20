@@ -17,20 +17,20 @@
 
 // broute force
 
-function threesum(nums){
-    for(let i=0;i<nums.length;i++){
-        for(let j=i+1;j<nums.length;j++){
-            for(let k=j+1;k<nums.length;k++){
-                if(nums[i]+nums[j]+nums[k]===0){
-                    return [nums[i],nums[j],nums[k]]
-                }
-            }
-        }
-    }
-}
+// function threesum(nums){
+//     for(let i=0;i<nums.length;i++){
+//         for(let j=i+1;j<nums.length;j++){
+//             for(let k=j+1;k<nums.length;k++){
+//                 if(nums[i]+nums[j]+nums[k]===0){
+//                     return [nums[i],nums[j],nums[k]]
+//                 }
+//             }
+//         }
+//     }
+// }
 
-const res= threesum([-1,0,1,2,-1,-4])
-console.log(res)
+// const res= threesum([-1,0,1,2,-1,-4])
+// console.log(res)
 
 
 // hash map we can use
@@ -39,3 +39,34 @@ console.log(res)
 
 
 // using two pointer best approch
+
+
+function threesum(nums){
+    let newarr= []
+    if(nums.length===0){
+        return []
+    }
+    nums.sort()
+    for(let i=0;i<nums.length-2;i++){
+        let j=i+1
+        let k=nums.length-1
+        while(j<k){
+            let sum= nums[j]+nums[k]
+            if(sum === -nums[i]){
+                newarr.push([nums[i],nums[j],nums[k]])
+                while(nums[i] == nums[i + 1]) i ++
+                while(nums[k] == nums[k - 1]) k -- 
+                j++
+                k--
+            }
+            else if(sum> -nums[i]){
+                k--
+            }
+            else if(sum< -nums[i]){
+                j++
+            }
+        }
+    }return newarr
+}
+const result= threesum([-1,0,1,2,-1,-4,-2,-3,3,0,4])
+console.log(result)
