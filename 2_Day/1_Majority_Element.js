@@ -12,3 +12,24 @@
 
 // Input: nums = [2,2,1,1,1,2,2]
 // Output: 2
+
+
+function majorityElement (nums) {
+    let obj = {};
+    
+    for(let i = 0; i < nums.length; i++){
+        obj[nums[i]] = obj[nums[i]]+1 || 1;
+        console.log(obj)
+        if(obj[nums[i]] > nums.length / 2){
+            return nums[i];
+        }
+        
+    }
+};
+
+const res=majorityElement([2,2,1,1,1,2,2])
+console.log(res)
+
+
+
+// we can optimize this using moors voting algo
