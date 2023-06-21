@@ -14,6 +14,9 @@
 // Output: 2
 
 
+
+
+
 function majorityElement (nums) {
     let obj = {};
     
