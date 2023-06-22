@@ -10,6 +10,7 @@
 
 // Input: nums = [1,1,5]
 // Output: [1,5,1]
+// need to work on this
 
 function permutation(nums) {
   if (nums.length === 1) {
