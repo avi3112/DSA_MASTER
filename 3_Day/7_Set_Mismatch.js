@@ -4,9 +4,24 @@
 
 // Find the number that occurs twice and the number that is missing and return them in the form of an array.
 
- 
-
 // Example 1:
 
 // Input: nums = [1,2,2,4]
 // Output: [2,3]
+
+// need to approve many test case not pass on leetcode
+
+function set(nums) {
+  if (nums.length <= 0) {
+    return;
+  }
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === nums[i + 1]) {
+      return [nums[i], nums[i] + 1];
+    }
+  }
+  return -1;
+}
+
+const rest = set([1, 1]);
+console.log(rest);

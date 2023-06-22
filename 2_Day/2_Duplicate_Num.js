@@ -21,13 +21,14 @@ function dp(nums) {
   nums.sort();
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] === nums[i + 1]) {
-      return nums[i];
+      return false;
     }
   }
-  return -1;
+  return true;
 }
-const res1 = dp([1, 3, 4, 2, 2]);
-//console.log(res1);
+const res1 = dp([1, 2, 3, 1]);
+
+console.log(res1);
 
 // hashmap
 
@@ -40,17 +41,17 @@ const res1 = dp([1, 3, 4, 2, 2]);
 //   }
 // }
 
-function dup(nums) {
-  let map = {};
-  for (let i = 0; i < nums.length; i++) {
-    if (!map[nums[i]]) {
-      map[nums[i]] = 1;
-    } else return nums[i];
-  }
-}
+// function dup(nums) {
+//   let map = {};
+//   for (let i = 0; i < nums.length; i++) {
+//     if (!map[nums[i]]) {
+//       map[nums[i]] = 1;
+//     } else return nums[i];
+//   }
+// }
 
-const result = dup([3, 1, 3, 4, 2]);
+// const result = dup([3, 1, 3, 4, 2]);
 
-console.log(result);
+// console.log(result);
 
 // we can use Floyd's Algorithm
