@@ -4,9 +4,23 @@
 
 // You must solve this problem without using the library's sort function.
 
- 
-
 // Example 1:
 
 // Input: nums = [2,0,2,1,1,0]
 // Output: [0,0,1,1,2,2]
+
+// bubble sort
+
+function Bublesort(arr) {
+  for (let i = arr.length; i > 0; i--) {
+    for (let j = 0; j < i; j++) {
+      if (arr[j] > arr[j + 1]) {
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      }
+    }
+  }
+  return arr;
+}
+
+const result = Bublesort([2, 0, 2, 1, 1, 0]);
+console.log(result);
