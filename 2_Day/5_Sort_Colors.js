@@ -11,15 +11,15 @@
 
 // bubble sort
 
-function Bublesort(arr) {
-  for (let i = arr.length; i > 0; i--) {
+function sortColors(nums) {
+  for (let i = nums.length; i > 0; i--) {
     for (let j = 0; j < i; j++) {
-      if (arr[j] > arr[j + 1]) {
-        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      if (nums[j] > nums[j + 1]) {
+        [nums[j], nums[j + 1]] = [nums[j + 1], nums[j]];
       }
     }
   }
-  return arr;
+  return nums;
 }
 
 const result = Bublesort([2, 0, 2, 1, 1, 0]);

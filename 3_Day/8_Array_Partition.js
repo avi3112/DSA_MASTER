@@ -15,3 +15,15 @@
 // Input: nums = [6,2,6,5,1,2]
 // Output: 9
 // Explanation: The optimal pairing is (2, 1), (2, 5), (6, 6). min(2, 1) + min(2, 5) + min(6, 6) = 1 + 2 + 6 = 9.
+
+function arrpartition(nums) {
+  nums.sort();
+  let minsum = 0;
+  for (let i = 0; i < nums.length; i += 2) {
+    minsum = minsum + nums[i];
+  }
+  return minsum;
+}
+
+const res = arrpartition([1, 4, 3, 2]);
+console.log(res);
