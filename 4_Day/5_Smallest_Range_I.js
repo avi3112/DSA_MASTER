@@ -16,7 +16,7 @@
 
 // nums = [0,10], k = 2 >> bcz 2nd max is 8 and 2nd min is 2 and diff will be 6
 // output >> 6
-// need to check once
+// need to check once bakwas queation
 
 function smallest(nums, k) {
   let max = nums[0];
@@ -38,3 +38,18 @@ function smallest(nums, k) {
 
 const res = smallest([0, 10], 2);
 console.log(res);
+
+// very confusing
+
+// var smallestRangeI = function (nums, k) {
+//   if (nums.length === 1) return 0;
+//   let arr = nums.sort((a, b) => a - b);
+//   if (arr[arr.length - 1] - arr[0] > 2 * k) {
+//     return arr[arr.length - 1] - arr[0] - 2 * k;
+//   } else {
+//     return 0;
+//   }
+// };
+
+// const res = smallestRangeI([0, 10], 2);
+// console.log(res);
