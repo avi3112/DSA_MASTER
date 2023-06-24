@@ -6,6 +6,7 @@
 
 // Input: flowerbed = [1,0,0,0,1], n = 1
 // Output: true
+
 function place(arr, n) {
   let total = 0;
   for (let i = 0; i < arr.length && total < n; i++) {
