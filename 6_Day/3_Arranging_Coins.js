@@ -5,3 +5,7 @@
  
 
 // Example 1:
+
+// Input: n = 5
+// Output: 2
+// Explanation: Because the 3rd row is incomplete, we return 2.
