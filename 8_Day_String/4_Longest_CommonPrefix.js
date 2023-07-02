@@ -8,3 +8,6 @@
 
 // Input: strs = ["flower","flow","flight"]
 // Output: "fl"
+
+
+// we can solve this using trie
