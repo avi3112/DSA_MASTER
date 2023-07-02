@@ -19,9 +19,17 @@
 // Output: "world hello"
 // Explanation: Your reversed string should not contain leading or trailing spaces.
 
+// function reversew(str){
+//     let arr= str.split(" ")
+//     let rev= arr.reverse()
+//     return rev.join(" ")
+// }
+// const rs= reversew("the sky is blue")
+// console.log(rs)
+
 
 function reverseword(s){
-    let arr= s.split('')
+    let arr= s.trim().split(" ")
     let left=0
     let right = arr.length-1
     while(left<= right){
@@ -30,8 +38,8 @@ function reverseword(s){
         arr[right]=temp
         left++
         right--
-    }return arr.toString()
+    }return arr.join(" ")
 }
 
-const result= reverseword("the sky is blue")
+const result= reverseword("  hello world  ")
 console.log(result)
