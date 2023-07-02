@@ -11,3 +11,16 @@
 // Input: s = "Hello World"
 // Output: 5
 // Explanation: The last word is "World" with length 5.
+
+
+
+function lastworld(s){
+    if(s.length===0) return 0
+    let arr= s.trim().split(' ')
+    return arr[arr.length-1].length
+    
+}
+
+const result= lastworld("Hello World")
+console.log(result)
+

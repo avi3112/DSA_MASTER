@@ -12,3 +12,31 @@
 
 // Input: s = ["H","a","n","n","a","h"]
 // Output: ["h","a","n","n","a","H"]
+
+// incase >> hello
+
+// function reverse(string){
+//     string.split(",")
+//     let newarr=[]
+//     for(let i=string.length-1;i>=0;i--){
+//         newarr.push(string[i])
+//     }return newarr
+// }
+
+// const res= reverse(["hello"])
+// console.log(res)
+
+function reversetwopointer(s){
+    let left=0
+    let right= s.length-1
+    while(left<=right){
+        let temp= s[left]
+        s[left]=s[right]
+        s[right]=temp
+        left++
+        right --
+    }return s
+}
+
+const result= reversetwopointer(["h","e","l","l","o"])
+console.log(result)
