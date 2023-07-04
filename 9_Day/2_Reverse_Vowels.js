@@ -6,5 +6,23 @@
 
 // Example 1:
 
-// Input: s = "hello"
+// Input: s = 
 // Output: "holle"
+
+function reversevol(s){
+    let news= s.toLowerCase()
+    let start= 0
+    let end= news.length-1
+    while(start<=end){
+        if(news[start] === "a" || "e" || "i" || "o" || "u"){
+            let temp= news[start]
+            news[start]=news[end]
+            news[end]= temp
+            start ++
+            end --
+        }
+    }return news
+}
+
+const res= reversevol("Hello")
+console.log(res)
