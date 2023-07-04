@@ -9,20 +9,46 @@
 // Input: s = 
 // Output: "holle"
 
-function reversevol(s){
-    let news= s.toLowerCase()
-    let start= 0
-    let end= news.length-1
-    while(start<=end){
-        if(news[start] === "a" || "e" || "i" || "o" || "u"){
-            let temp= news[start]
-            news[start]=news[end]
-            news[end]= temp
-            start ++
-            end --
+// function reversevol(s){
+//     let news= s.toLowerCase()
+//     let start= 0
+//     let end= news.length-1
+//     while(start<=end){
+//         if(news[start] === "a" || "e" || "i" || "o" || "u"){
+//             let temp= news[start]
+//             news[start]=news[end]
+//             news[end]= temp
+//             start ++
+//             end --
+//         }
+//     }return news
+// }
+
+// const res= reversevol("Hello")
+// console.log(res)
+
+
+function rev(s){
+    const vowels = ['a', 'e', 'i', 'o', 'u','A','E','I','O','U'];
+    let newst= s.split("")
+    let left= 0
+    let right=newst.length-1
+    while(left<right){
+        if(vowels.includes(newst[left]) && vowels.includes(newst[right])){
+            let temp= newst[left]
+            newst[left]=newst[right]
+            newst[right]=temp
+            left++
+            right--
         }
-    }return news
+        if(!vowels.includes(newst[left])){
+            left++
+        }
+        if(!vowels.includes(newst[right])){
+            right--
+        }
+    }return newst.join("")
 }
 
-const res= reversevol("Hello")
-console.log(res)
+const result= rev("leetcode")
+console.log(result)

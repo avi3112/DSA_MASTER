@@ -14,15 +14,15 @@
 // Explanation: s can be split into "RL", "RRLL", "RL", "RL", each substring contains same number of 'L' and 'R'.
 
 
-function balstr(str){
-    let ns= str.split("")
+function balstr(s){
+    let nstr= s.split("")
     let count= 0
     let total=0
-    for(let i=0;i<ns.length;i++){
-        if(ns[i]==='R'){
+    for(let i=0;i<nstr.length;i++){
+        if(nstr[i]==='R'){
             count++
         }
-        if(ns[i]==='L'){
+        if(nstr[i]==='L'){
             count--
         }
         if(count ===0){

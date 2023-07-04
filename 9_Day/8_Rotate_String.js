@@ -9,3 +9,11 @@
 
 // Input: s = "abcde", goal = "cdeab"
 // Output: true
+
+function rotategoal(s,goal){
+    if (s.length !== goal.length) return false;
+    return s.concat(s).includes(goal);
+}
+
+const result= rotategoal("abcde","cdeab")
+console.log(result)

@@ -8,3 +8,11 @@
 
 // Input: num1 = "11", num2 = "123"
 // Output: "134"
+
+function addStrings(num1, num2) {
+    return (BigInt(num1) + BigInt(num2)).toString()
+    
+};
+
+const result= addStrings("11","123")
+console.log(result)
