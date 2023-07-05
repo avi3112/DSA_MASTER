@@ -16,7 +16,6 @@ function reverseword(s){
         newstr[i]= word.join("")
         
     }return newstr.join(" ")
-    
  
 }
 
