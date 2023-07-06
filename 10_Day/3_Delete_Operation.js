@@ -14,3 +14,7 @@
 
 // this queastion belong to dynamic programing
 
+
+function deleteop(){
+    
+}

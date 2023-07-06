@@ -11,3 +11,14 @@
 // Input  : 5 
 
 // Output : 15
+
+function findSum(n){
+   let sum = 0;
+   for (let x = 1; x <= n; x++)
+     sum = sum + x;
+   return sum;
+}
+
+const result= findSum(3)
+console.log(result)
+

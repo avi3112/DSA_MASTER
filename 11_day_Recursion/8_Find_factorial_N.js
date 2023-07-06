@@ -11,3 +11,11 @@
 // Input: N = 4
 
 // Output: 24
+
+function factorial(n) {
+    if (n == 0) return 1;
+    return n * factorial(n - 1);
+}
+
+const result= factorial(5)
+console.log(result)

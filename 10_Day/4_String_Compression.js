@@ -47,6 +47,8 @@
 //     return k
 // };
 
+// 
+
 var compress = function(chars) {
     let i = 0;
     let j = 0;
