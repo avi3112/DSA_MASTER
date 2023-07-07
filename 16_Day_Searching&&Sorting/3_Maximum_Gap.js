@@ -14,3 +14,6 @@
 // Input: nums = [10]
 // Output: 0
 // Explanation: The array contains less than 2 elements, therefore return 0.
+
+// it is hard in category
+

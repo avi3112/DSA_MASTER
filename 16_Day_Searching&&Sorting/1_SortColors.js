@@ -14,3 +14,19 @@
 
 // Input: nums = [2,0,1]
 // Output: [0,1,2]
+
+function sortColors(nums) {
+    for (let i = nums.length; i > 0; i--) {
+        for (let j = 0; j < i; j++) {
+            if (nums[j] > nums[j + 1]) {
+                [nums[j], nums[j + 1]] = [nums[j + 1], nums[j]];
+      }
+    }
+  }
+  return nums;
+};
+
+const result= sortColors([2,0,2,1,1,0])
+console.log(result)
+
+

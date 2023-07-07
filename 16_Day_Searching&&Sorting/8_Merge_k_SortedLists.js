@@ -20,3 +20,6 @@
 
 // Input: lists = []
 // Output: []
+
+// it is hard solution
+
