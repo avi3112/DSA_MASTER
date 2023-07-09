@@ -233,6 +233,7 @@ console.log(eval('3'+'2')) // 32
 
 //11 >> what is break and continue?
 
+//break will stop the loop once conditon true and continue will skip the loop for d condition.
 const arr10 = [1,2,3,4,5,6]
 
 function tocheck(arr10){
@@ -247,3 +248,33 @@ function tocheck(arr10){
 
 const test9= tocheck(arr10)
 console.log(test9)
+
+
+//12>>  what is v8 javascript engine?
+
+// v8 is an open sourse high-performance js engine used in google chrome,it wrriten in C++.
+
+
+// 13>>> Is javascript is compiled and interpreted language?
+// javascript is interpreted language means each line and run it,and also sigle threaded.
+
+//14 >> what is purpose if JSON stringify and json parse?
+// JSON stringify basically used for convert object to string.
+// json parse basically used to change the string to object.
+
+
+// 15 >> what is the difference in synchronous and asynchronous?
+
+// synchronous execute the code line by line.
+//asynchronous wait where code taking time and other code will get execute.
+
+// difference way to deal with asynchronous code.
+// a) useCallback
+// b) promise
+// c) Async and await
+
+
+// 16 >> what is event listers in javascript?
+// event listers waits for the occurence of an event ex: addEventListener()
+
+

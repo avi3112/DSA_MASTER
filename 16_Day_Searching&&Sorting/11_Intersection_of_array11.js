@@ -29,3 +29,5 @@ function intersect(nums1, nums2) {
 
 const result = intersect([1,2,2,1],[2,2])
 console.log(result)
+
+// not working on leedcode

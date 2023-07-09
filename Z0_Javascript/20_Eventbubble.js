@@ -1,2 +1,2 @@
-// what is event bubling,capturing ,propagaion?
+// what is event bubling,capturing ,propagaion? and event delegation?
 

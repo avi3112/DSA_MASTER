@@ -14,7 +14,7 @@
 // Output: [0]
 
 function moveZeroes(nums) {
-    let end = nums.length;
+    let end = nums.length-1;
 	for (let i = end; i >= 0; i--) { // We loop from the end of array
 		if (nums[i] === 0) { // if current element is 0
 			nums.splice(i, 1); // we remove if from array
