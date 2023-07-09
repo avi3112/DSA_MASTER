@@ -48,6 +48,40 @@ setTimeout(() => console.log('Third'), 0);
 console.log('Third')
 
 
+// =========diff way======
 
 
+// curring using bind and clousure
+// same as bind and while calling function will send another parameter
 
+let multipy = function(x,y){
+    console.log(x*y)
+}
+
+let mul2 = multipy.bind(this,2)
+mul2(3 )
+
+
+let mulclouser = function(x){
+    return function(y){
+        console.log(x*y)
+    }
+}
+
+let mulli = mulclouser(2)
+mulli(3)
+
+
+// what is infine currying
+
+// we can achieve the infinite currying by using below function
+
+function add(a){
+    return function(b){
+        if(b) return add(a+b)
+        return a
+    }
+}
+
+
+console.log(add(2)(5)(7)(9)())

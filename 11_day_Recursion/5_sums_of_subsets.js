@@ -3,4 +3,6 @@
 // Output: 0 2 3 5
 
 // Input : arr[] = {2, 4, 5}
-// Output : 0 2 4 5 6 7 9 11
+// Output : 0 2 4 5 6 7 9 11s
+
+

@@ -33,7 +33,6 @@ function isPowerOfFour(n) {
     else{
         return false
     }
-    
 };
 
 const result= isPowerOfFour(5)

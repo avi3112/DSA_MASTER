@@ -16,5 +16,6 @@
 
 
 function deleteop(){
+    let del=0
     
 }

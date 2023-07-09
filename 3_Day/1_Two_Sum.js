@@ -14,13 +14,12 @@
 
 function twoSum(nums, target) {
   let newnum = nums.sort();
-  console.log(newnum);
   let i = 0;
-  let j = nums.length - 1;
+  let j = newnum.length - 1;
   while (i < j) {
-    let sum = nums[i] + nums[j];
+    let sum = newnum[i] + newnum[j];
     if (sum === target) {
-      return [nums[i], nums[j]];
+      return [newnum[i], newnum[j]];
     } else if (sum > target) {
       j--;
     } else {
